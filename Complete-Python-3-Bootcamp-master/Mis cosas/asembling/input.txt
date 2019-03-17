@@ -1,0 +1,26 @@
+	inA	
+	storeA	X
+	inA	
+	storeA	Y
+	loadA	X
+	subA	Y
+	jneg	else
+	storeA	Z
+	jmp	inW
+else	loadA	X
+	addA	Y
+	storeA	Z
+inW	loadA	Y
+	jneg	endW
+	loadA	X
+	addA	Z
+	storeA	X
+	loadA	Y
+	subA	1
+	storeA	Y
+	jmp	inW
+endW	loadA	Z
+	outA	
+	loadA	X
+	outA	
+	halt	
